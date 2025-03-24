@@ -18,7 +18,7 @@ body {
 .header {
   position: relative;
   display: flex;
-  justify-content: center;
+  /* justify-content: center; */
   height: 100vh;
   min-height: 600px;
   max-height: 756px;
@@ -32,12 +32,12 @@ body {
   font-weight: bold;
   /* background: black;
   color: white; */
-  padding: 10px 20px;
+  /* padding: 10px 20px; */
 }
 
 .logo_place_header {
-  display: flex;
-  align-items: center;
+  /* display: flex; */
+  /* align-items: center; */
   width: 228px;
   height: 30px;
   top: 30px;
@@ -47,12 +47,13 @@ body {
 .header__title {
   
   position: absolute;
+  justify-content: center;
   width: 730px;
   left: 64px;
   font-size: 102px;
   font-weight: 600;
-  line-height: 96px
-  
+  line-height: 96px;
+  z-index: 2;
 }
 
 
@@ -90,14 +91,14 @@ body {
 
 /* ниже мы привели пример двух селекторов, чтобы вы вспомнили запись элемента */
 .header__square-pic {
-  position: absolute;
-  display: block;
-  /* right: 0;
-  bottom: 0; */
-  height: 568px;
+  position: absolute; /* Возвращаем абсолютное позиционирование */
+  top: 64px;
+  right: 0;
   width: 568px;
-  color: #2f80ed;
-  z-index: -1;
+  height: 568px;
+  background-color: #2f80ed; /* Синий фон */
+  border: none; /* Убираем красную рамку */
+  z-index: 0; /* Убедимся, что он не скрывается */
 }
 
 /* и элемента с модификатором вида ключ-значение */
@@ -110,4 +111,54 @@ body {
 
 .span-accent {
   font-weight: bold;
+  line-height: 34px;
+  font-size: 24px;
+  font-style: 600;
+}
+
+.description {
+  display: flex;
+  flex-direction: column;
+  /* flex: auto; */
+  align-items: flex-start;
+  margin-top: 100px;
+  width: 80%;
+}
+
+.brief {
+  flex-shrink: 0;
+  text-align: left;
+  top: 100px;
+  width: 175px;
+  line-height: 1.2;
+  color: #2f80ed;
+  font-size: 18px;
+  font-style: normal;
+}
+
+.main-text {
+  flex-grow: 1;
+  flex-direction: column;
+  width: 80%;
+  min-width: 784px;
+  justify-content: space-between;
+  line-height: 34px;
+  font-size: 24px;
+  font-style: 600;
+}
+
+.digits{
+  position: relative;
+}
+
+.section-title {
+  line-height: 1.15;
+  font-size: 60px;
+  font-style: 600;
+}
+
+.section-subtitle {
+  line-height: 34px;
+  font-size: 24px;
+  font-style: normal;
 }
