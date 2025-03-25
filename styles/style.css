@@ -30,6 +30,7 @@ body {
 .logo {
   font-size: 20px;
   font-weight: bold;
+  display: block;
   /* background: black;
   color: white; */
   /* padding: 10px 20px; */
@@ -47,7 +48,8 @@ body {
 .header__title {
   
   position: absolute;
-  justify-content: center;
+  
+  
   width: 730px;
   left: 64px;
   font-size: 102px;
@@ -117,10 +119,15 @@ body {
 }
 
 .description {
+  
+}
+
+
+.two-columns {
   display: flex;
   flex-direction: column;
   /* flex: auto; */
-  align-items: flex-start;
+  align-items: center;
   margin-top: 100px;
   width: 80%;
 }
@@ -147,18 +154,109 @@ body {
   font-style: 600;
 }
 
-.digits{
-  position: relative;
+.digits {
+  text-align: center;
+  padding: 50px;
 }
 
 .section-title {
   line-height: 1.15;
   font-size: 60px;
-  font-style: 600;
+  font-weight: 600;
+  margin-bottom: 10px;
 }
 
 .section-subtitle {
-  line-height: 34px;
   font-size: 24px;
+  font-weight: normal;
+  line-height: 34px;
+  margin-bottom: 30px;
+}
+
+/* === Таблица === */
+.table {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* === Ячейки === */
+.table__cell {
+  background: white;
+  padding: 20px;
+  text-align: left;
+}
+
+/* === Заголовки === */
+.table__heading {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.15;
+  margin-bottom: 5px;
+}
+
+/* === Текст === */
+.table__text {
+  font-size: 18px;
+  font-weight: normal;
+  line-height: 1.2;
+}
+
+.feynmann {
+  text-align: center;
+  /* padding: 50px; */
+}
+
+.feynmann__title {
+  top: 100px;
+  width: 648px;
+  line-height: 1.15;
+  font-size: 120px;
+  font-style: 600;
+}
+
+.feynmann__subtitle {
+  top: 70px;
+  line-height: 51px;
+  font-size: 36px;
   font-style: normal;
+}
+
+.feynmann__link {
+  line-height: 51px;
+  font-size: 36px;
+  font-style: normal;
+  color: #2f80ed;
+  text-decoration: none;
+}
+
+
+.feynmann__link:hover {
+  text-decoration: underline;
+}
+
+.digits_theme_dark {
+  background-color: #1e1e1e;
+}
+
+.section-title_theme_dark {
+  color: white;
+}
+
+.section-subtitle_theme_dark {
+  color: #cccccc;
+}
+
+.table_theme_dark {
+  background-color: transparent;
+}
+
+.table__heading_theme_dark {
+  color: #f2f2f2;
+}
+
+.table__text_theme_dark {
+  color: #b3b3b3;
 }
